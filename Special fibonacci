@@ -1,0 +1,16 @@
+import java.util.*;
+class HelloWorld {
+     public static int fibb(int n){
+            if(n<=1){
+                return 1;
+            }
+            else{
+                return (fibb(n-1) *fibb(n-1)) + (fibb(n-2)* fibb(n-2));
+            }
+        }
+    public static void main(String[] args) {
+        int no = 5;
+        int op = fibb(no);
+        System.out.print(op%47);
+    }
+}
