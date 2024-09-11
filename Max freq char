@@ -1,0 +1,23 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String str = "aabbbccccddddd";
+        Map<Character,Integer> m = new HashMap<>();
+        for(char ch:str.toCharArray()){
+            m.put(ch,m.getOrDefault(ch,0)+1);
+            }
+        int current = 0;
+        int max=0;
+        char freq = '\0';
+        char maxc ='\0';
+        for(Map.Entry<Character,Integer> entry :m.entrySet()){
+            current = entry.getValue();
+            freq = entry.getKey();
+            if(current>max){
+                max = current;
+                maxc = freq; 
+            }
+        }
+        System.out.print(maxc);
+    }
+}
